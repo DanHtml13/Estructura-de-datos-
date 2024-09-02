@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de Datos y Algoritmos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estructuras de Datos y Algoritmos</h1>
+
+    <h2>Estructuras de Datos</h2>
+
+    <h3>1. Arrays (Arreglos)</h3>
+    <ul>
+        <li><strong>Definición y características</strong>: Un array es una estructura de datos que almacena elementos del mismo tipo en ubicaciones de memoria contiguas. Cada elemento se accede mediante un índice.</li>
+        <li><strong>Operaciones básicas</strong>:
+            <ul>
+                <li><strong>Acceso</strong>: Obtener el valor en una posición específica. Ejemplo: <code>array[i]</code>.</li>
+                <li><strong>Inserción</strong>: Añadir un elemento en una posición específica. Puede ser costoso si se necesita mover otros elementos.</li>
+                <li><strong>Eliminación</strong>: Quitar un elemento de una posición específica. Similar a la inserción, puede requerir mover otros elementos.</li>
+            </ul>
+        </li>
+        <li><strong>Arrays multidimensionales</strong>: Arrays que tienen más de una dimensión, como matrices (ej., <code>array[i][j]</code>).</li>
+    </ul>
+
+    <h3>2. Listas Enlazadas</h3>
+    <ul>
+        <li><strong>Listas enlazadas simples</strong>: Cada elemento (nodo) tiene una referencia al siguiente nodo.</li>
+        <li><strong>Listas doblemente enlazadas</strong>: Cada nodo tiene referencias tanto al siguiente como al nodo anterior.</li>
+        <li><strong>Listas circularmente enlazadas</strong>: El último nodo apunta de nuevo al primer nodo, formando un círculo.</li>
+        <li><strong>Operaciones básicas</strong>:
+            <ul>
+                <li><strong>Inserción</strong>: Añadir un nodo en una posición específica.</li>
+                <li><strong>Eliminación</strong>: Eliminar un nodo de una posición específica.</li>
+                <li><strong>Búsqueda</strong>: Encontrar un nodo con un valor específico.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>3. Pilas (Stacks)</h3>
+    <ul>
+        <li><strong>Principio LIFO (Last In, First Out)</strong>: El último elemento añadido es el primero en ser eliminado.</li>
+        <li><strong>Operaciones</strong>:
+            <ul>
+                <li><strong>Push</strong>: Añadir un elemento a la pila.</li>
+                <li><strong>Pop</strong>: Eliminar el elemento en la parte superior de la pila.</li>
+                <li><strong>Peek</strong>: Obtener el valor del elemento en la parte superior sin eliminarlo.</li>
+            </ul>
+        </li>
+        <li><strong>Implementación</strong>: Se puede implementar usando arrays o listas enlazadas.</li>
+    </ul>
+
+    <h3>4. Colas (Queues)</h3>
+    <ul>
+        <li><strong>Principio FIFO (First In, First Out)</strong>: El primer elemento añadido es el primero en ser eliminado.</li>
+        <li><strong>Tipos</strong>:
+            <ul>
+                <li><strong>Colas simples</strong>: Operaciones básicas de enqueue (añadir) y dequeue (eliminar).</li>
+                <li><strong>Colas circulares</strong>: La cola se comporta como un círculo, reutilizando el espacio vacío.</li>
+                <li><strong>Colas de prioridad</strong>: Los elementos tienen prioridades, y los elementos con mayor prioridad se procesan antes.</li>
+            </ul>
+        </li>
+        <li><strong>Operaciones</strong>:
+            <ul>
+                <li><strong>Enqueue</strong>: Añadir un elemento a la cola.</li>
+                <li><strong>Dequeue</strong>: Eliminar el primer elemento de la cola.</li>
+                <li><strong>Front</strong>: Obtener el valor del primer elemento sin eliminarlo.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>5. Árboles</h3>
+    <ul>
+        <li><strong>Árbol binario</strong>: Cada nodo tiene hasta dos hijos (izquierda y derecha).</li>
+        <li><strong>Árbol de búsqueda binaria (BST)</strong>: Un árbol binario donde los valores en el subárbol izquierdo son menores y los valores en el subárbol derecho son mayores que el valor del nodo.</li>
+        <li><strong>Árbol AVL (autobalanceado)</strong>: Un BST que se mantiene balanceado mediante rotaciones para asegurar que la diferencia de altura entre subárboles no sea mayor a 1.</li>
+        <li><strong>Árbol B</strong>: Un árbol balanceado de orden `m` usado en sistemas de archivos y bases de datos.</li>
+        <li><strong>Árbol N-ario</strong>: Un árbol donde cada nodo puede tener hasta `N` hijos.</li>
+        <li><strong>Operaciones</strong>:
+            <ul>
+                <li><strong>Inserción</strong>: Añadir un nodo al árbol.</li>
+                <li><strong>Eliminación</strong>: Quitar un nodo del árbol.</li>
+                <li><strong>Recorrido</strong>: Visitar los nodos en un orden específico (inorden, preorden, postorden).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>6. Grafos</h3>
+    <ul>
+        <li><strong>Definición y representación</strong>: Un grafo es un conjunto de nodos (vértices) y aristas que conectan pares de nodos.
+            <ul>
+                <li><strong>Matriz de adyacencia</strong>: Una matriz donde la celda <code>(i, j)</code> indica si hay una arista entre los nodos <code>i</code> y <code>j</code>.</li>
+                <li><strong>Lista de adyacencia</strong>: Una lista de listas, donde cada lista representa los nodos adyacentes a un nodo dado.</li>
+            </ul>
+        </li>
+        <li><strong>Grafos dirigidos y no dirigidos</strong>:
+            <ul>
+                <li><strong>Dirigidos</strong>: Las aristas tienen dirección.</li>
+                <li><strong>No dirigidos</strong>: Las aristas no tienen dirección.</li>
+            </ul>
+        </li>
+        <li><strong>Grafos ponderados y no ponderados</strong>:
+            <ul>
+                <li><strong>Ponderados</strong>: Las aristas tienen pesos.</li>
+                <li><strong>No ponderados</strong>: Las aristas no tienen pesos.</li>
+            </ul>
+        </li>
+        <li><strong>Algoritmos básicos</strong>:
+            <ul>
+                <li><strong>BFS (Breadth-First Search)</strong>: Recorre los nodos por niveles.</li>
+                <li><strong>DFS (Depth-First Search)</strong>: Recorre los nodos profundizando en cada rama antes de retroceder.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>7. Tablas Hash</h3>
+    <ul>
+        <li><strong>Concepto de función hash</strong>: Una función que convierte una clave en una posición en la tabla hash.</li>
+        <li><strong>Manejo de colisiones</strong>:
+            <ul>
+                <li><strong>Encadenamiento</strong>: Utiliza listas enlazadas para manejar colisiones.</li>
+                <li><strong>Direccionamiento abierto</strong>: Busca una nueva posición en la tabla cuando ocurre una colisión.</li>
+            </ul>
+        </li>
+        <li><strong>Operaciones básicas</strong>:
+            <ul>
+                <li><strong>Inserción</strong>: Añadir una entrada a la tabla hash.</li>
+                <li><strong>Búsqueda</strong>: Encontrar un valor asociado a una clave.</li>
+                <li><strong>Eliminación</strong>: Quitar una entrada de la tabla hash.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Algoritmos</h2>
+
+    <h3>1. Algoritmos de Ordenación</h3>
+    <ul>
+        <li><strong>Ordenación por burbuja (Bubble Sort)</strong>: Compara elementos adyacentes y los intercambia si están en el orden incorrecto.</li>
+        <li><strong>Ordenación por inserción (Insertion Sort)</strong>: Construye la lista ordenada un elemento a la vez.</li>
+        <li><strong>Ordenación por selección (Selection Sort)</strong>: Selecciona el mínimo (o máximo) elemento de la lista no ordenada y lo coloca en la posición correcta.</li>
+        <li><strong>Ordenación rápida (Quick Sort)</strong>: Divide y conquista; selecciona un pivote y particiona el array en dos sub-arrays.</li>
+        <li><strong>Ordenación por fusión (Merge Sort)</strong>: Divide el array en mitades, ordena cada mitad y luego fusiona las mitades ordenadas.</li>
+        <li><strong>Ordenación por montículo (Heap Sort)</strong>: Convierte el array en un heap y luego extrae el máximo (o mínimo) repetidamente para construir el array ordenado.</li>
+    </ul>
+
+    <h3>2. Algoritmos de Búsqueda</h3>
+    <ul>
+        <li><strong>Búsqueda lineal (Linear Search)</strong>: Recorre cada elemento del array hasta encontrar el objetivo.</li>
+        <li><strong>Búsqueda binaria (Binary Search)</strong>: Busca en un array ordenado dividiendo el rango de búsqueda a la mitad en cada paso.</li>
+        <li><strong>Búsqueda en profundidad (DFS)</strong>: Explora lo más profundo posible antes de retroceder.</li>
+        <li><strong>Búsqueda en amplitud (BFS)</strong>: Explora todos los vecinos a un nivel antes de pasar al siguiente nivel.</li>
+    </ul>
+
+    <h3>3. Algoritmos de Grafos</h3>
+    <ul>
+        <li><strong>Algoritmo de Dijkstra</strong>: Encuentra el camino más corto desde un nodo fuente a todos los demás nodos en un grafo ponderado.</li>
+        <li><strong>Algoritmo de Bellman-Ford</strong>: Encuentra el camino más corto en grafos con pesos negativos, detecta ciclos negativos.</li>
+        <li><strong>Algoritmo de Floyd-Warshall</strong>: Encuentra el camino más corto entre todos los pares de nodos en un grafo ponderado.</li>
+        <li><strong>Algoritmo de Kruskal</strong>: Encuentra el árbol de expansión mínima en un grafo ponderado usando el método de conjuntos disjuntos.</li>
+        <li><strong>Algoritmo de Prim</strong>: Encuentra el árbol de expansión mínima comenzando desde un nodo y añadiendo el borde de menor peso que conecta un nodo no visitado.</li>
+    </ul>
+
+    <h3>4. Algoritmos de Programación Dinámica</h3>
+    <ul>
+        <li><strong>Concepto</strong>: Resuelve problemas dividiéndolos en subproblemas más pequeños y almacenando los resultados para evitar cálculos repetidos.</li>
+        <li><strong>Problemas clásicos</strong>:
+            <ul>
+                <li><strong>Mochila</strong>: Determina el conjunto de artículos a incluir en una mochila para maximizar el valor total sin exceder la capacidad.</li>
+                <li><strong>Secuencia de Fibonacci</strong>: Calcula números de Fibonacci usando resultados previamente calculados.</li>
+                <li><strong>Cadena de matrices</strong>: Encuentra la forma más eficiente de multiplicar una cadena de matrices.</li>
+            </ul>
+        </li>
+        <li><strong>Técnica de memoización y tabulación</strong>:
+            <ul>
+                <li><strong>Memoización</strong>: Almacena resultados de subproblemas en una tabla para evitar cálculos redundantes.</li>
+                <li><strong>Tabulación</strong>: Construye una tabla iterativamente para resolver el problema en orden ascendente.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>5. Algoritmos de Divide y Vencerás</h3>
+    <ul>
+        <li><strong>Concepto</strong>: Divide el problema en subproblemas más pequeños, resuelve cada subproblema y combina las soluciones.</li>
+        <li><strong>Ejemplos</strong>:
+            <ul>
+                <li><strong>Merge Sort</strong>: Divide el array en mitades, ordena cada mitad y fusiona.</li>
+                <li><strong>Quick Sort</strong>: Divide el array en torno a un pivote y ordena las particiones.</li>
+                <li><strong>Búsqueda binaria</strong>: Divide el rango de búsqueda a la mitad hasta encontrar el elemento.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>6. Complejidad Computacional</h3>
+    <ul>
+        <li><strong>Notación Big O</strong>: Representa la complejidad en el peor caso del tiempo o espacio requerido por un algoritmo.</li>
+        <li><strong>Análisis de tiempo y espacio</strong>: Estudia cómo el tiempo y el espacio requerido por un algoritmo crecen con respecto al tamaño de la entrada.</li>
+        <li><strong>Casos promedio, mejor y peor caso</strong>: Analiza el comportamiento del algoritmo en diferentes situaciones.</li>
+    </ul>
+
+    <h3>7. Técnicas de Optimización</h3>
+    <ul>
+        <li><strong>Estrategias para mejorar la eficiencia</strong>: Métodos para hacer que los algoritmos y estructuras de datos sean más eficientes.</li>
+        <li><strong>Técnicas de poda</strong>: Reducen el espacio de búsqueda para optimizar algoritmos (como poda alfa-beta en juegos).</li>
+    </ul>
+
+    <footer>
+        <p>&copy;Daniel2024</p>
+    </footer>
+
+</body>
+</html>
